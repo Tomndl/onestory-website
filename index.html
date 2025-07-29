@@ -75,7 +75,7 @@
                             <ul>
                                 <li><strong>IP:</strong> connect.g45.hopeheberg.fr</li>
                                 <li><strong>Port:</strong> 31210</li>
-                                <li><strong>Slots:</strong> 280 joueurs</li>
+                                <li><strong>Slots:</strong> 128 joueurs</li>
                                 <li><strong>Uptime:</strong> 99.9%</li>
                             </ul>
                         </div>
@@ -118,87 +118,36 @@
         <div id="page-boutique" class="page">
             <section class="shop-section">
                 <div class="container">
-                    <h2 class="section-title">Boutique OneStory</h2>
-                    <p class="section-subtitle">Améliorez votre expérience avec nos packs premium</p>
+                    <div class="shop-header">
+                        <h2 class="section-title">Boutique OneStory</h2>
+                        <p class="section-subtitle">Choisissez votre catégorie d'achat</p>
+                        <div class="shop-actions">
+                            <button class="btn btn-cart" onclick="openCart()">
+                                <i class="fas fa-shopping-cart"></i>
+                                Panier <span id="cart-count" class="cart-count">0</span>
+                            </button>
+                        </div>
+                    </div>
                     
-                    <div class="shop-grid">
-                        <div class="shop-card">
-                            <div class="shop-card-header">
-                                <div class="shop-card-badge">POPULAIRE</div>
-                                <h3>Pack Starter</h3>
-                                <div class="price">
-                                    <span class="currency">€</span>
-                                    <span class="amount">9.99</span>
-                                    <span class="period">/mois</span>
-                                </div>
+                    <div class="shop-categories">
+                        <div class="category-card" onclick="navigateToCategory('coins')">
+                            <div class="category-icon">
+                                <i class="fas fa-coins"></i>
                             </div>
-                            <div class="shop-card-content">
-                                <ul>
-                                    <li><i class="fas fa-check"></i> 50,000€ de départ</li>
-                                    <li><i class="fas fa-check"></i> Véhicule de luxe</li>
-                                    <li><i class="fas fa-check"></i> Appartement premium</li>
-                                    <li><i class="fas fa-check"></i> Accès VIP Discord</li>
-                                    <li><i class="fas fa-check"></i> Support prioritaire</li>
-                                </ul>
+                            <h3>Coins</h3>
+                            <p>Monnaie virtuelle pour vos achats en jeu</p>
+                            <div class="category-features">
+                                <span><i class="fas fa-check"></i> Monnaie universelle</span>
+                                <span><i class="fas fa-check"></i> Utilisable partout</span>
+                                <span><i class="fas fa-check"></i> Pas d'expiration</span>
                             </div>
-                            <div class="shop-card-footer">
-                                <button class="btn btn-shop" data-pack="starter">Acheter Maintenant</button>
-                            </div>
+                            <button class="btn btn-category">
+                                <i class="fas fa-arrow-right"></i>
+                                Voir les Coins
+                            </button>
                         </div>
 
-                        <div class="shop-card featured">
-                            <div class="shop-card-header">
-                                <div class="shop-card-badge">RECOMMANDÉ</div>
-                                <h3>Pack Premium</h3>
-                                <div class="price">
-                                    <span class="currency">€</span>
-                                    <span class="amount">19.99</span>
-                                    <span class="period">/mois</span>
-                                </div>
-                            </div>
-                            <div class="shop-card-content">
-                                <ul>
-                                    <li><i class="fas fa-check"></i> 100,000€ de départ</li>
-                                    <li><i class="fas fa-check"></i> 3 véhicules de luxe</li>
-                                    <li><i class="fas fa-check"></i> Villa de luxe</li>
-                                    <li><i class="fas fa-check"></i> Accès VIP Discord</li>
-                                    <li><i class="fas fa-check"></i> Support prioritaire</li>
-                                    <li><i class="fas fa-check"></i> Jobs exclusifs</li>
-                                    <li><i class="fas fa-check"></i> Événements privés</li>
-                                </ul>
-                            </div>
-                            <div class="shop-card-footer">
-                                <button class="btn btn-shop featured" data-pack="premium">Acheter Maintenant</button>
-                            </div>
-                        </div>
 
-                        <div class="shop-card">
-                            <div class="shop-card-header">
-                                <div class="shop-card-badge">ELITE</div>
-                                <h3>Pack Ultimate</h3>
-                                <div class="price">
-                                    <span class="currency">€</span>
-                                    <span class="amount">39.99</span>
-                                    <span class="period">/mois</span>
-                                </div>
-                            </div>
-                            <div class="shop-card-content">
-                                <ul>
-                                    <li><i class="fas fa-check"></i> 250,000€ de départ</li>
-                                    <li><i class="fas fa-check"></i> 5 véhicules de luxe</li>
-                                    <li><i class="fas fa-check"></i> Penthouse de luxe</li>
-                                    <li><i class="fas fa-check"></i> Accès VIP Discord</li>
-                                    <li><i class="fas fa-check"></i> Support prioritaire</li>
-                                    <li><i class="fas fa-check"></i> Jobs exclusifs</li>
-                                    <li><i class="fas fa-check"></i> Événements privés</li>
-                                    <li><i class="fas fa-check"></i> Rôle personnalisé</li>
-                                    <li><i class="fas fa-check"></i> Accès beta features</li>
-                                </ul>
-                            </div>
-                            <div class="shop-card-footer">
-                                <button class="btn btn-shop" data-pack="ultimate">Acheter Maintenant</button>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="shop-info">
@@ -210,12 +159,30 @@
                         <div class="shop-feature">
                             <i class="fas fa-clock"></i>
                             <h4>Activation Immédiate</h4>
-                            <p>Vos avantages sont disponibles instantanément</p>
+                            <p>Vos achats sont disponibles instantanément</p>
                         </div>
                         <div class="shop-feature">
-                            <i class="fas fa-undo"></i>
-                            <h4>Remboursement 7j</h4>
-                            <p>Garantie de satisfaction ou remboursement</p>
+                            <i class="fas fa-users"></i>
+                            <h4>Support 24/7</h4>
+                            <p>Notre équipe est disponible pour vous aider</p>
+                        </div>
+                    </div>
+                    
+                    <div class="shop-stats">
+                        <div class="stat-card">
+                            <i class="fas fa-star"></i>
+                            <h3>4.9/5</h3>
+                            <p>Note moyenne des clients</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h3>1000+</h3>
+                            <p>Transactions réussies</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-heart"></i>
+                            <h3>98%</h3>
+                            <p>Satisfaction client</p>
                         </div>
                     </div>
                 </div>
@@ -229,31 +196,31 @@
                     <h2 class="section-title">Galerie</h2>
                     <div class="gallery-grid">
                         <div class="gallery-item">
-                            <img src="https://via.placeholder.com/400x300/2c3e50/ffffff?text=GTA+RP+1" alt="Screenshot GTA RP">
+                            <img src="images/ville-onestory.jpg" alt="Ville OneStory - Centre-ville">
                             <div class="gallery-overlay">
-                                <h3>Ville Vivante</h3>
-                                <p>Découvrez notre ville dynamique</p>
+                                <h3>Ville OneStory</h3>
+                                <p>Centre-ville moderne et dynamique</p>
                             </div>
                         </div>
                         <div class="gallery-item">
-                            <img src="https://via.placeholder.com/400x300/34495e/ffffff?text=GTA+RP+2" alt="Screenshot GTA RP">
+                            <img src="images/vehicules-premium.jpg" alt="Véhicules Premium OneStory">
                             <div class="gallery-overlay">
-                                <h3>Activités Variées</h3>
-                                <p>Des jobs pour tous les goûts</p>
+                                <h3>Véhicules Premium</h3>
+                                <p>Collection exclusive de véhicules rares</p>
                             </div>
                         </div>
                         <div class="gallery-item">
-                            <img src="https://via.placeholder.com/400x300/3498db/ffffff?text=GTA+RP+3" alt="Screenshot GTA RP">
+                            <img src="images/jobs-exclusifs.jpg" alt="Jobs Exclusifs OneStory">
                             <div class="gallery-overlay">
-                                <h3>Véhicules Uniques</h3>
-                                <p>Une flotte de véhicules personnalisés</p>
+                                <h3>Jobs Exclusifs</h3>
+                                <p>Métiers uniques et rémunérateurs</p>
                             </div>
                         </div>
                         <div class="gallery-item">
-                            <img src="https://via.placeholder.com/400x300/e74c3c/ffffff?text=GTA+RP+4" alt="Screenshot GTA RP">
+                            <img src="images/communaute-active.jpg" alt="Communauté Active OneStory">
                             <div class="gallery-overlay">
-                                <h3>Événements Réguliers</h3>
-                                <p>Participez à nos événements spéciaux</p>
+                                <h3>Communauté Active</h3>
+                                <p>Plus de 500 joueurs connectés</p>
                             </div>
                         </div>
                     </div>
