@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneStory - Serveur GTA RP Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-crown"></i>
+                <span>OneStory</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link" onclick="navigateTo('accueil')">Accueil</a></li>
+                <li><a href="#" class="nav-link" onclick="navigateTo('serveur')">Serveur</a></li>
+                <li><a href="#" class="nav-link" onclick="navigateTo('boutique')">Boutique</a></li>
+                <li><a href="#" class="nav-link" onclick="navigateTo('galerie')">Galerie</a></li>
+                <li><a href="#" class="nav-link" onclick="navigateTo('contact')">Discord</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Pages Container -->
+    <div id="pages-container">
+        <!-- Page Accueil -->
+        <div id="page-accueil" class="page active">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">OneStory</h1>
+                    <p class="hero-subtitle">L'expérience GTA RP la plus immersive et professionnelle</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="joinServer()">Rejoindre le Serveur</button>
+                    </div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Joueurs Actifs</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-clock"></i>
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Disponibilité</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-star"></i>
+                        <span class="stat-number">4.9</span>
+                        <span class="stat-label">Note Moyenne</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Page Serveur -->
+        <div id="page-serveur" class="page">
+            <section class="server-section">
+                <div class="container">
+                    <h2 class="section-title">Serveur Premium OneStory</h2>
+                    <div class="server-info">
+                        <div class="server-card">
+                            <i class="fas fa-server"></i>
+                            <h3>Informations Serveur</h3>
+                            <ul>
+                                <li><strong>IP:</strong> connect.g45.hopeheberg.fr</li>
+                                <li><strong>Port:</strong> 31210</li>
+                                <li><strong>Slots:</strong> 280 joueurs</li>
+                                <li><strong>Uptime:</strong> 99.9%</li>
+                            </ul>
+                        </div>
+                        <div class="server-card">
+                            <i class="fas fa-cogs"></i>
+                            <h3>Fonctionnalités</h3>
+                            <ul>
+                                <li>Économie ultra-réaliste</li>
+                                <li>Jobs exclusifs OneStory</li>
+                                <li>Système de gangs avancé</li>
+                                <li>Propriétés de luxe</li>
+                                <li>Véhicules rares et uniques</li>
+                            </ul>
+                        </div>
+                        <div class="server-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Sécurité</h3>
+                            <ul>
+                                <li>Anti-cheat professionnel</li>
+                                <li>Modération 24/7</li>
+                                <li>Backup sécurisé</li>
+                                <li>Support premium</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="server-join">
+                        <button class="btn btn-primary btn-large" onclick="joinServer()">
+                            <i class="fas fa-play"></i>
+                            Rejoindre OneStory
+                        </button>
+                        <p class="server-join-info">Cliquez pour lancer FiveM</p>
+                        
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Page Boutique -->
+        <div id="page-boutique" class="page">
+            <section class="shop-section">
+                <div class="container">
+                    <h2 class="section-title">Boutique OneStory</h2>
+                    <p class="section-subtitle">Améliorez votre expérience avec nos packs premium</p>
+                    
+                    <div class="shop-grid">
+                        <div class="shop-card">
+                            <div class="shop-card-header">
+                                <div class="shop-card-badge">POPULAIRE</div>
+                                <h3>Pack Starter</h3>
+                                <div class="price">
+                                    <span class="currency">€</span>
+                                    <span class="amount">9.99</span>
+                                    <span class="period">/mois</span>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <ul>
+                                    <li><i class="fas fa-check"></i> 50,000€ de départ</li>
+                                    <li><i class="fas fa-check"></i> Véhicule de luxe</li>
+                                    <li><i class="fas fa-check"></i> Appartement premium</li>
+                                    <li><i class="fas fa-check"></i> Accès VIP Discord</li>
+                                    <li><i class="fas fa-check"></i> Support prioritaire</li>
+                                </ul>
+                            </div>
+                            <div class="shop-card-footer">
+                                <button class="btn btn-shop" data-pack="starter">Acheter Maintenant</button>
+                            </div>
+                        </div>
+
+                        <div class="shop-card featured">
+                            <div class="shop-card-header">
+                                <div class="shop-card-badge">RECOMMANDÉ</div>
+                                <h3>Pack Premium</h3>
+                                <div class="price">
+                                    <span class="currency">€</span>
+                                    <span class="amount">19.99</span>
+                                    <span class="period">/mois</span>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <ul>
+                                    <li><i class="fas fa-check"></i> 100,000€ de départ</li>
+                                    <li><i class="fas fa-check"></i> 3 véhicules de luxe</li>
+                                    <li><i class="fas fa-check"></i> Villa de luxe</li>
+                                    <li><i class="fas fa-check"></i> Accès VIP Discord</li>
+                                    <li><i class="fas fa-check"></i> Support prioritaire</li>
+                                    <li><i class="fas fa-check"></i> Jobs exclusifs</li>
+                                    <li><i class="fas fa-check"></i> Événements privés</li>
+                                </ul>
+                            </div>
+                            <div class="shop-card-footer">
+                                <button class="btn btn-shop featured" data-pack="premium">Acheter Maintenant</button>
+                            </div>
+                        </div>
+
+                        <div class="shop-card">
+                            <div class="shop-card-header">
+                                <div class="shop-card-badge">ELITE</div>
+                                <h3>Pack Ultimate</h3>
+                                <div class="price">
+                                    <span class="currency">€</span>
+                                    <span class="amount">39.99</span>
+                                    <span class="period">/mois</span>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <ul>
+                                    <li><i class="fas fa-check"></i> 250,000€ de départ</li>
+                                    <li><i class="fas fa-check"></i> 5 véhicules de luxe</li>
+                                    <li><i class="fas fa-check"></i> Penthouse de luxe</li>
+                                    <li><i class="fas fa-check"></i> Accès VIP Discord</li>
+                                    <li><i class="fas fa-check"></i> Support prioritaire</li>
+                                    <li><i class="fas fa-check"></i> Jobs exclusifs</li>
+                                    <li><i class="fas fa-check"></i> Événements privés</li>
+                                    <li><i class="fas fa-check"></i> Rôle personnalisé</li>
+                                    <li><i class="fas fa-check"></i> Accès beta features</li>
+                                </ul>
+                            </div>
+                            <div class="shop-card-footer">
+                                <button class="btn btn-shop" data-pack="ultimate">Acheter Maintenant</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shop-info">
+                        <div class="shop-feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Paiement Sécurisé</h4>
+                            <p>Transactions protégées par cryptage SSL</p>
+                        </div>
+                        <div class="shop-feature">
+                            <i class="fas fa-clock"></i>
+                            <h4>Activation Immédiate</h4>
+                            <p>Vos avantages sont disponibles instantanément</p>
+                        </div>
+                        <div class="shop-feature">
+                            <i class="fas fa-undo"></i>
+                            <h4>Remboursement 7j</h4>
+                            <p>Garantie de satisfaction ou remboursement</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Page Galerie -->
+        <div id="page-galerie" class="page">
+            <section class="gallery-section">
+                <div class="container">
+                    <h2 class="section-title">Galerie</h2>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="https://via.placeholder.com/400x300/2c3e50/ffffff?text=GTA+RP+1" alt="Screenshot GTA RP">
+                            <div class="gallery-overlay">
+                                <h3>Ville Vivante</h3>
+                                <p>Découvrez notre ville dynamique</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://via.placeholder.com/400x300/34495e/ffffff?text=GTA+RP+2" alt="Screenshot GTA RP">
+                            <div class="gallery-overlay">
+                                <h3>Activités Variées</h3>
+                                <p>Des jobs pour tous les goûts</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://via.placeholder.com/400x300/3498db/ffffff?text=GTA+RP+3" alt="Screenshot GTA RP">
+                            <div class="gallery-overlay">
+                                <h3>Véhicules Uniques</h3>
+                                <p>Une flotte de véhicules personnalisés</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://via.placeholder.com/400x300/e74c3c/ffffff?text=GTA+RP+4" alt="Screenshot GTA RP">
+                            <div class="gallery-overlay">
+                                <h3>Événements Réguliers</h3>
+                                <p>Participez à nos événements spéciaux</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Page Discord -->
+        <div id="page-contact" class="page">
+            <section class="discord-section">
+                <div class="container">
+                    <h2 class="section-title">Rejoignez notre Discord</h2>
+                    <div class="discord-content">
+                        <div class="discord-card">
+                            <i class="fab fa-discord"></i>
+                            <h3>Communauté Discord</h3>
+                            <p>Rejoignez notre communauté Discord pour rester connecté avec les autres joueurs, recevoir les dernières nouvelles et participer aux événements du serveur.</p>
+                            <div class="discord-features">
+                                <div class="feature">
+                                    <i class="fas fa-users"></i>
+                                    <span>Communauté active</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-bell"></i>
+                                    <span>Annonces en temps réel</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-headset"></i>
+                                    <span>Support vocal</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Événements exclusifs</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-discord">
+                                <i class="fab fa-discord"></i>
+                                Rejoindre le Discord
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>OneStory</h3>
+                    <p>L'expérience GTA RP la plus immersive et professionnelle</p>
+                    <div class="social-links">
+                        <a href="#" class="discord-link"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="#" onclick="navigateTo('accueil')">Accueil</a></li>
+                        <li><a href="#" onclick="navigateTo('serveur')">Serveur</a></li>
+                        <li><a href="#" onclick="navigateTo('boutique')">Boutique</a></li>
+                        <li><a href="#" onclick="navigateTo('galerie')">Galerie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Guide Débutant</a></li>
+                        <li><a href="#">Support Premium</a></li>
+                        <li><a href="#">Conditions d'utilisation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 OneStory. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
